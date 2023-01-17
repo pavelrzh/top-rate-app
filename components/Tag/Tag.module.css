@@ -20,7 +20,7 @@
 }
 
 .ghost {
-    border: 1px, solid, var(--gray-light);
+    border: 1px solid var(--gray-light);
 }
 
 .red {
@@ -46,6 +46,6 @@
 
 .primary {
     color: var(--primary);
+    border: 1px solid var(--primary);
     background: none;
-    border: 1px, solid, var(--primary);
 }
