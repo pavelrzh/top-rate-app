@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Button, Htag, Ptag, Rating, Tag } from "../components";
 
 function Home(): JSX.Element {
-	
+	const[rating, setRating] = useState<number>(4);
 
 	return (
 		<>
@@ -16,7 +16,7 @@ function Home(): JSX.Element {
 			<Tag size='medium' color='red'>Red</Tag>
 			<Tag size='small' color='green'>Green</Tag>
 			<Tag color='primary'>Primary</Tag>
-			<Rating rating={4}/>
+			<Rating rating={rating} isEditable setRating={setRating}/>
 		</>
 	);
 }
