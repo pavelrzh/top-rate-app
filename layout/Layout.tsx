@@ -1,4 +1,4 @@
-/* eslint-disable no-mixed-spaces-and-tabs */
+
 import { LayoutProps } from './Layout.props';
 import styles from './Layout.module.css';
 import cn from 'classnames';
@@ -27,9 +27,9 @@ export const withLayout = <T extends Record<string, unknown> & IAppContext>(Comp
     return function withLayoutComponent(props: T): JSX.Element {
         return (
 			<AppContextProvider menu={props.menu} firstCategory={props.firstCategory}>
-        		<Layout>
-                	<Component {...props}/>
-            	</Layout>
+				<Layout>
+					<Component {...props}/>
+				</Layout>
 			</AppContextProvider>
         );
     };
