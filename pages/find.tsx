@@ -4,7 +4,7 @@ import { withLayout } from "../layout/Layout";
 import axios from "axios";
 import { MenuItem } from "../interfaces/menu.interface";
 
-function Search(): JSX.Element {
+function Find(): JSX.Element {
 
 	return (
 		<>
@@ -13,7 +13,7 @@ function Search(): JSX.Element {
 	);
 }
 
-export default withLayout(Search);
+export default withLayout(Find);
 
 export const getStaticProps:GetStaticProps<HomeProps> = async () => {
 	const firstCategory = 0;
