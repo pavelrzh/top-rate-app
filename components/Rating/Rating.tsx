@@ -30,7 +30,7 @@ export const Rating = ({isEditable = false, rating, setRating, ...props}: Rating
                         onKeyDown={(e:KeyboardEvent<SVGElement>) => isEditable && handleSpace(i + 1, e)}
                     />
                 </span>
-            );
+            )
         });
         setRatingArray(updatedArray);
     };
@@ -56,7 +56,7 @@ export const Rating = ({isEditable = false, rating, setRating, ...props}: Rating
     };
     return (
         <div {...props}>
-            {ratingArray.map((r, i) => (<span key={i}>{r}</span>))};
+            {ratingArray.map((r, i) => (<span key={i}>{r}</span>))}
         </div>
     );
 };

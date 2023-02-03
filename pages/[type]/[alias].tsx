@@ -72,6 +72,7 @@ export const getStaticProps: GetStaticProps<TopPageProps> = async ({ params }: G
 				products
 			}
 		};
+		
 	}
 	catch {
 		return {
