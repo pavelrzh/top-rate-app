@@ -25,7 +25,7 @@ export const TopPageComponent = ({page, products, firstCategory}: TopPageCompone
 				<Sort sort={sort} setSort={setSort}/>
 			</div>
 			<div>
-				{sortedProducts && sortedProducts.map(p => (<Product key={p._id} product={p}/>))}
+				{sortedProducts && sortedProducts.map(p => (<Product layout key={p._id} product={p}/>))}
 				
 			</div>
 			{firstCategory == TopLevelCategory.Courses &&                   // Если firstCategory - Курсы, отображать блок Вакансии
