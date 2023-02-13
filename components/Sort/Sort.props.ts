@@ -1,10 +1,11 @@
 
 export interface SortProps extends React.ComponentProps<'div'> {
     sort: SortEnum;
-	setSort: (sort: SortEnum) => void
+	setSort: (sort: Exclude<SortEnum, SortEnum.Reset>) => void
 }
 
 export enum SortEnum {
 	Rating,
-	Price
+	Price,
+	Reset
 }

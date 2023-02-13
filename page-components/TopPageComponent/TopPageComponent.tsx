@@ -7,9 +7,9 @@ import { useEffect, useReducer } from "react";
 import { sortReducer } from "./sort.reducer";
 
 export const TopPageComponent = ({page, products, firstCategory}: TopPageComponentProps): JSX.Element => {
-	const [{products: sortedProducts, sort}, dispathSort] = useReducer(sortReducer, {products, sort: SortEnum.Rating});
+	const [{products: sortedProducts, sort}, dispathSort] = useReducer(sortReducer, {products, sort: SortEnum.Reset});
 
-	const setSort = (sort: SortEnum) => {
+	const setSort = (sort: Exclude<SortEnum, SortEnum.Reset>) => {
 		dispathSort({type: sort});
 	};
 
