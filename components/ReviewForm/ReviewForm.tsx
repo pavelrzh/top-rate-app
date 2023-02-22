@@ -11,7 +11,7 @@ import { useForm, Controller } from 'react-hook-form';
 import { API } from '../../helpers/api';
 import axios from 'axios';
 import { useState } from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 
 export const ReviewForm = ({productId, className, ...props}: ReviewFormProps): JSX.Element => {
@@ -86,14 +86,11 @@ export const ReviewForm = ({productId, className, ...props}: ReviewFormProps): J
 			<motion.div animate={isSuccess ? 'visible' : 'hidden'}
 						variants={variants} 
 						initial='hidden'
-						
 				>
 				{isSuccess && <div	className={cn(styles.success, styles.panel)}>
 					<div className={styles.successTitle}>Ваш отзыв отправлен</div>
 					<div className={styles.successDescr}>Спасибо, Ваш отзыв будет опубликован после проверки</div>
-					<CloseIcon className={styles.close} 
-					onClick={()=>setIsSuccess(!isSuccess)}
-					/>
+					<CloseIcon className={styles.close} onClick={()=>setIsSuccess(!isSuccess)}/>
 				</div>}
 			</motion.div>
 			{error && <div className={cn(styles.error, styles.panel)}>
