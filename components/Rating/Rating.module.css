@@ -3,6 +3,10 @@
     
 }
 
+.star {
+	display: inline-block;
+}
+
 .filled svg {
     fill: var(--primary);
 }
