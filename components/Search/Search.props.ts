@@ -1,4 +1,4 @@
 
-export interface SearchProps extends React.ComponentProps<'div'> {
+export interface SearchProps extends React.ComponentProps<'form'> {
     
 }
