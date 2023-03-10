@@ -4,18 +4,21 @@
 
 .active .sortIcon {
 	display: block;
+
 	margin-right: 8px;
 }
 
 .active {
-	font-weight: 700;
 	color: var(--primary);
+
+	font-weight: 700;
 }
 
 .sort {
 	display: grid;
 	grid-template-columns: auto auto;
 	gap: 40px;
+
 	/* align-items: flex-end;
 	justify-items: center; */
 }
@@ -28,15 +31,20 @@
 	display: grid;
 	grid-template-columns: 20px 1fr;
 	gap: 8px;
+
 	align-items: center;
+
 	cursor: pointer;
+
 	border: none;
 	background: none;
+
 	font-size: 16px;
 	line-height: 22px;
 }
 
 .sort button:not(.active) {
 	grid-template-columns: 1fr;
+
 	color: var(--black);
 }

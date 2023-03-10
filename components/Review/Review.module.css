@@ -1,6 +1,7 @@
 .review {
 	display: grid;
 	grid-template-columns: [start] auto 1fr auto auto [end];
+
 	align-items: center;
 	gap: 10px;
 
@@ -20,7 +21,7 @@
 	font-weight: 700;
 }
 
-@media screen and (max-width: 930px){
+@media screen and (max-width: 930px) {
 	.review {
 		grid-template-columns: [start] 30px [titlestart] auto [dateend] 1fr [end];
 	}
@@ -34,7 +35,7 @@
 	}
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 480px) {
 	.date {
 		grid-column: start / end;
 	}

@@ -7,6 +7,7 @@
 		"stylelint-order"
 	],
 	"rules": {
+		"max-line-length": 190,
 		"indentation": 
 			"tab",
 		"color-hex-case": "upper",
