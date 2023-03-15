@@ -68,7 +68,6 @@ export const ReviewForm = ({productId, isOpened, className, ...props}: ReviewFor
 						rules={{required: {value: true, message: 'Необходимо указать рейтинг'}}}
 						render={({field}) => (
 							<Rating
-								className={styles.rating} 
 								isEditable 
 								rating={field.value} 
 								setRating={field.onChange}
