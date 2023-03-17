@@ -17,7 +17,7 @@ export const Review = ({review, className, ...props}: ReviewProps): JSX.Element 
 				<span className={styles.name}>{name}:</span>&nbsp;&nbsp;
 				<span>{title}</span>
 			</div>
-			<div className={styles.date}>
+			<div className={styles.date} suppressHydrationWarning>
 				{dayjs((createdAt)).locale('ru').format('DD MMMM YYYY')}
 			</div>
 			<div className={styles.rating}>
