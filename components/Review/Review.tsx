@@ -18,7 +18,7 @@ export const Review = ({review, className, ...props}: ReviewProps): JSX.Element 
 				<span>{title}</span>
 			</div>
 			<div className={styles.date}>
-				{dayjs(new Date(createdAt)).locale('ru').format('DD MMMM YYYY')}
+				{dayjs((createdAt)).locale('ru').format('DD MMMM YYYY')}
 			</div>
 			<div className={styles.rating}>
 				<Rating rating={rating} />
