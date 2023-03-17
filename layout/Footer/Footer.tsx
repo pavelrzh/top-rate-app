@@ -8,7 +8,7 @@ export const Footer = ({className, ...props}: FooterProps): JSX.Element => {
 	return (
 		<footer className={cn(className, styles.footer)} {...props}>
             <div>
-			OwlTop © 2020 - {dayjs(new Date()).format('YYYY')} Все права защищены
+			OwlTop © 2020 - {dayjs(new Date()).format('YYYY')} Все права защищены!!!!
             </div>
             <a href='#' target='_blank'>
             Пользовательское соглашение
