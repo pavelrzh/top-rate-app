@@ -2,56 +2,63 @@
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 20px;
+
 	max-width: 1200px;
 	margin-top: 40px;
 	padding: 0;
-  }
+}
+
 .coursesHeader {
 	margin-top: 20px;
+
 	color: var(--primary);
 }
 
 .coursesTitleMain {
+	max-width: 70%;
+
 	font-size: 32px;
 	font-weight: 600;
-	max-width: 70%;
 	line-height: 146%;
 }
 
 .coursesTitle {
 	margin-top: 20px;
 }
-  
+
 @media (max-width: 1100px) {
-.courses {
-	grid-template-columns: repeat(3, 1fr);
-}
+	.courses {
+		grid-template-columns: repeat(3, 1fr);
+	}
 }
 
 @media (max-width: 920px) {
-.courses {
-	grid-template-columns: 1fr 1fr;
-}
-.coursesTitleMain {
-	max-width: 80%;
-}
+	.courses {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.coursesTitleMain {
+		max-width: 80%;
+	}
 }
 
 @media (max-width: 765px) {
-.courses {
-	grid-template-columns: 1fr 1fr;
-}
+	.courses {
+		grid-template-columns: 1fr 1fr;
+	}
 }
 
 @media (max-width: 640px) {
-.courses {
-	grid-template-columns: 1fr;
-}
-.coursesTitleMain {
-	font-size: 26px;
-    font-weight: 500;
-}
-.coursesTitle {
-	display: none;
-}
+	.courses {
+		grid-template-columns: 1fr;
+	}
+
+	.coursesTitleMain {
+		font-size: 26px;
+		font-weight: 500;
+	}
+
+	.coursesTitle {
+		display: none;
+	}
 }
