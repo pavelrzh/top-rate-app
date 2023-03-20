@@ -1,30 +1,31 @@
 import { GetStaticProps } from "next";
-import React, { useState } from "react";
-import { Button, Htag, Input, Ptag, Rating, Tag, Textarea } from "../components";
+import React from "react";
+import { Htag } from "../components";
 import { withLayout } from "../layout/Layout";
 import axios from "axios";
 import { MenuItem } from "../interfaces/menu.interface";
 import { API } from "../helpers/api";
+import CoursesCard from "../components/CoursesCard/CoursesCard";
+import styles from "../styles/home.module.css";
+
 
 function Home({menu}: HomeProps): JSX.Element {
-	const[rating, setRating] = useState<number>(4);
 
 	return (
-		<>
-			<Htag tag='h1'>Текст</Htag>
-			<Button appearance='primary'arrow='right'>Кнопка</Button>
-			<Button appearance='ghost' arrow='down'>Кнопка</Button>
-			<Ptag size='small'>Напишу сразу в двух курсах, так как проходил оба.</Ptag>
-			<Ptag size='large'>Напишу сразу в двух курсах, так как проходил оба.</Ptag>
-			<Ptag>Напишу сразу в двух курсах, так как проходил оба.</Ptag>
-			<Tag size='small'>Ghost</Tag>
-			<Tag size='medium' color='red'>Red</Tag>
-			<Tag size='small' color='green'>Green</Tag>
-			<Tag color='primary'>Primary</Tag>
-			<Rating rating={rating} isEditable setRating={setRating}/>
-			<Input placeholder="test" />
-			<Textarea placeholder="test" />
-		</>
+		<div>
+			<div className={styles.coursesTitleMain}>Агрегатор онлайн-курсов - полный список лучших обучений онлайн.</div>
+			<div className={styles.coursesTitle}>
+				<Htag tag="h1">Мы поможем Вам подобрать лучший вариант.</Htag>
+			</div>
+			<div className={styles.coursesHeader}>
+				<Htag tag="h2">Выберите категорию для поиска курса.</Htag>
+			</div>
+			<ul className={styles.courses}>
+			{menu.map((i) => (
+				<CoursesCard key={i._id.secondCategory} category={i} />
+			))}
+			</ul>
+		</div>
 	);
 }
 
