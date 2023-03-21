@@ -1,3 +1,8 @@
+**https://aggregator-courses.vercel.app/**
+
+**https://aggregator-courses-pavelrzh.vercel.app/**
+
+
 **Описание**
 
 Приложение рейтинг на NextJS, агрегатор онлайн курсов.
